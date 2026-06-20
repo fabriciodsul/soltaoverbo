@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.turbo/
+*.env
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.cert
+~/.verbo/
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+.vscode/settings.json
