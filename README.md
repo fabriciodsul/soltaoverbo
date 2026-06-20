@@ -38,7 +38,7 @@ exemplo.ts  debounce → atraso intencional
 
 ### Extensão VS Code
 
-1. Baixe o `verbo-0.1.0.vsix` na [página de releases](https://github.com/fabriciodsul/soltaoverbo/releases)
+1. Baixe o `verbo-0.2.0.vsix` na [página de releases](https://github.com/fabriciodsul/soltaoverbo/releases)
 2. Abra o VS Code
 3. `Ctrl+Shift+P` → `Extensions: Install from VSIX` → selecione o arquivo
 4. Reinicie o VS Code
@@ -119,15 +119,16 @@ O verbo controla quantas vezes você viu cada termo. Após 5 sessões diferentes
 
 ## Termos disponíveis
 
-106 termos distribuídos em 5 categorias:
+157 termos distribuídos em 6 categorias:
 
 | Categoria | Exemplos |
 |-----------|---------|
-| `general` | callback, closure, debounce, generic, destructuring |
-| `backend` | middleware, JWT, OAuth, migration, graceful shutdown |
-| `frontend` | hydration, hook, tree shaking, bundle, lazy loading |
-| `devops` | pipeline, canary, blue-green, observability, TTL |
-| `data` | index, ACID, sharding, upsert, materialized view |
+| `general` | callback, closure, decorator, factory, higher-order function |
+| `backend` | middleware, JWT, GraphQL, retry, interceptor |
+| `frontend` | hydration, hook, PWA, service worker, composable |
+| `devops` | pipeline, canary, autoscaling, tracing, sidecar |
+| `data` | index, ACID, sharding, DTO, hot path |
+| `ai` | embedding, RAG, LLM, hallucination, fine-tuning |
 
 ---
 
