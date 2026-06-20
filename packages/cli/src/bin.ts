@@ -7,10 +7,21 @@ import { runStats } from "./commands/stats.ts"
 import { bold, dim } from "./ui.ts"
 
 if (process.platform === "win32") {
-  try { execSync("chcp 65001", { stdio: "ignore" }) } catch {}
+  try {
+    // Switch the Windows console to UTF-8 (code page 65001).
+    // We use PowerShell's Console API which is more reliable than chcp
+    // because it sets OutputEncoding for the current console session directly.
+    execSync(
+      "powershell -NoProfile -NonInteractive -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8\"",
+      { stdio: "ignore" },
+    )
+  } catch {
+    // Fallback to chcp if PowerShell is unavailable
+    try { execSync("chcp 65001", { stdio: "ignore" }) } catch {}
+  }
 }
 
-const VERSION = "0.1.0"
+const VERSION = "0.2.0"
 const [, , sub, ...rest] = process.argv
 
 function help(): void {
@@ -28,7 +39,7 @@ function help(): void {
     ${bold("install")}                Injeta termos no Claude Code (barra de pensamento)
     ${bold("reset")}                  Limpa todo o histórico
     ${bold("list")}                   Lista todos os termos disponíveis
-    ${bold("list --category")} ${dim("<cat>")}  Filtra por: general, backend, frontend, devops, data
+    ${bold("list --category")} ${dim("<cat>")}  Filtra por: general, backend, frontend, devops, data, ai
     ${bold("list --absorbed")}        Inclui termos já absorvidos
 
   ${bold("EXEMPLOS")}
