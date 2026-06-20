@@ -54,7 +54,7 @@ Ctrl+P → ext install verbo-dev.verbo
 
 ```bash
 # Pré-requisitos: Node.js 20+ e pnpm 9+
-git clone https://github.com/fabriciodsul/soultaoverbo
+git clone https://github.com/fabriciodsul/soltaoverbo
 cd soultaoverbo
 pnpm install && pnpm build
 ```
