@@ -11,37 +11,31 @@ O verbo detecta termos técnicos em inglês no seu código e exibe traduções e
 
 ## Como funciona
 
-Enquanto você edita arquivos, o verbo identifica termos como `middleware`, `payload`, `debounce` e mostra a tradução e explicação em português direto no terminal ou no VS Code.
+Enquanto você edita arquivos, o verbo identifica termos como `middleware`, `payload`, `embedding` e mostra a tradução e explicação em português direto no terminal ou no VS Code — sem modificar o arquivo.
 
+**No terminal (CLI):**
 ```
 exemplo.ts  middleware → intermediário / camada de processamento
               função que intercepta a requisição antes de chegar no handler final
+exemplo.ts  embedding → incorporação vetorial
+              representação numérica de texto num espaço vetorial — base da busca semântica
 exemplo.ts  payload → carga útil / dados da requisição
               conjunto de dados enviados no corpo de uma requisição HTTP
-exemplo.ts  debounce → atraso intencional
-              adia a execução de uma função até o usuário parar de chamar por X ms
 ```
 
----
-
-## Pacotes
-
-| Pacote | Link | Descrição |
-|--------|------|-----------|
-| `@soltaoverbo/core` | [npm](https://www.npmjs.com/package/@soltaoverbo/core) | Parser, injetor de comentários e sistema de repetição espaçada |
-| `@soltaoverbo/cli` | [npm](https://www.npmjs.com/package/@soltaoverbo/cli) | Interface de linha de comando |
-| `verbo` (VS Code) | [Marketplace](https://marketplace.visualstudio.com/items?itemName=verbo-dev.verbo) *(em breve)* | Extensão para VS Code com ghost text inline |
+**No VS Code (ghost text inline):**
+```typescript
+const cache = new Map()           // cache → armazenamento temporário
+const callback = (data) => { }    // callback → função de retorno / chamada de volta
+```
 
 ---
 
 ## Instalação
 
-### Extensão VS Code
+### VS Code
 
-1. Baixe o `verbo-0.2.0.vsix` na [página de releases](https://github.com/fabriciodsul/soltaoverbo/releases)
-2. Abra o VS Code
-3. `Ctrl+Shift+P` → `Extensions: Install from VSIX` → selecione o arquivo
-4. Reinicie o VS Code
+Busque **"verbo"** na aba de extensões do VS Code ou acesse o [Marketplace](https://marketplace.visualstudio.com/items?itemName=verbo-dev.verbo).
 
 ### CLI
 
@@ -62,7 +56,7 @@ verbo start --watch          # observa o diretório atual
 verbo start --watch ./src    # observa uma pasta específica
 ```
 
-A barra de status no terminal mostra seu progresso em tempo real:
+A barra de status mostra seu progresso em tempo real:
 
 ```
  verbo  ./src  ·  3 hoje  ·  12 vistos  ·  2 absorvidos
@@ -83,7 +77,7 @@ verbo stats                      # progresso de aprendizado
 verbo stats --short              # saída compacta (para status bars)
 verbo install                    # integra com o Claude Code
 verbo list                       # lista todos os termos disponíveis
-verbo list --category backend    # filtra por categoria
+verbo list --category ai         # filtra por categoria
 verbo reset                      # limpa o histórico
 ```
 
@@ -98,9 +92,9 @@ verbo install
 ```
 
 ```
+✓ verbo · embedding → incorporação vetorial
 ✓ verbo · middleware → intermediário / camada de processamento
-✓ verbo · debounce → atraso intencional
-✓ verbo · payload → carga útil / dados da requisição
+✓ verbo · RAG → geração aumentada por recuperação
 ...
 Esses termos aparecem enquanto o Claude pensa.
 ```
@@ -119,7 +113,7 @@ O verbo controla quantas vezes você viu cada termo. Após 5 sessões diferentes
 
 ## Termos disponíveis
 
-157 termos distribuídos em 6 categorias:
+157 termos em 6 categorias, detectados automaticamente em 20+ linguagens:
 
 | Categoria | Exemplos |
 |-----------|---------|
@@ -130,16 +124,17 @@ O verbo controla quantas vezes você viu cada termo. Após 5 sessões diferentes
 | `data` | index, ACID, sharding, DTO, hot path |
 | `ai` | embedding, RAG, LLM, hallucination, fine-tuning |
 
+**Linguagens suportadas:** TypeScript, JavaScript, Python, Go, Rust, Java, Kotlin, Ruby, PHP, C#, Swift, Dart, Scala, Elixir, Shell, SQL, Lua, C, C++ e mais.
+
 ---
 
-## Extensão VS Code
+## Pacotes
 
-A extensão exibe ghost text inline ao lado das linhas com termos técnicos, sem modificar o arquivo.
-
-**Comandos disponíveis no VS Code:**
-- `verbo: Ver progresso` — estatísticas de aprendizado
-- `verbo: Ativar/desativar` — liga ou desliga a extensão
-- `verbo: Resetar histórico` — limpa tudo e recomeça
+| Pacote | Link | Descrição |
+|--------|------|-----------|
+| `@soltaoverbo/core` | [npm](https://www.npmjs.com/package/@soltaoverbo/core) | Parser, injetor de comentários e sistema de repetição espaçada |
+| `@soltaoverbo/cli` | [npm](https://www.npmjs.com/package/@soltaoverbo/cli) | Interface de linha de comando |
+| `verbo` (VS Code) | [Marketplace](https://marketplace.visualstudio.com/items?itemName=verbo-dev.verbo) | Extensão com ghost text inline |
 
 ---
 
