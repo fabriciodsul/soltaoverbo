@@ -9,5 +9,5 @@ export default defineConfig({
   dts: false,
   sourcemap: true,
   external: ["vscode"], // VS Code API injected by the host
-  noExternal: ["@verbo/core"], // Bundle core inline — extension is self-contained
+  noExternal: ["@soltaoverbo/core"], // Bundle core inline — extension is self-contained
 })

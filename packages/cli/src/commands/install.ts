@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs"
 import { homedir } from "node:os"
 import { join } from "node:path"
-import { buildTermIndex, loadTerms, SpacedRepetition } from "@verbo/core"
+import { buildTermIndex, loadTerms, SpacedRepetition } from "@soltaoverbo/core"
 import { bold, dim, green } from "../ui.ts"
 
 const CLAUDE_SETTINGS = join(homedir(), ".claude", "settings.json")

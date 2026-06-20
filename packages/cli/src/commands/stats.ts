@@ -1,4 +1,4 @@
-import { SpacedRepetition } from "@verbo/core"
+import { SpacedRepetition } from "@soltaoverbo/core"
 import { bold, cyan, dim, green, progressBar, yellow } from "../ui.ts"
 
 export function runStats(args: string[] = []): void {

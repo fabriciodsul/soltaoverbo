@@ -1,4 +1,4 @@
-import { loadTerms, SpacedRepetition } from "@verbo/core"
+import { loadTerms, SpacedRepetition } from "@soltaoverbo/core"
 import { bold, cyan, dim, green, yellow } from "../ui.ts"
 
 const CATEGORIES = ["general", "backend", "frontend", "devops", "data"]

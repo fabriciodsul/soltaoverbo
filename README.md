@@ -25,9 +25,9 @@ exemplo.ts  debounce → atraso intencional
 
 | Pacote | Descrição |
 |--------|-----------|
-| `@verbo/core` | Parser, injetor de comentários e sistema de repetição espaçada |
-| `@verbo/cli` | Interface de linha de comando |
-| `@verbo/vscode` | Extensão para VS Code com ghost text inline |
+| `@soltaoverbo/core` | Parser, injetor de comentários e sistema de repetição espaçada |
+| `@soltaoverbo/cli` | Interface de linha de comando |
+| `@soltaoverbo/vscode` | Extensão para VS Code com ghost text inline |
 
 ---
 

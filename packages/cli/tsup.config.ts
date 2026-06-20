@@ -9,5 +9,5 @@ export default defineConfig({
   dts: false,
   // shebang injected by tsup banner so chmod +x works after install
   banner: { js: "#!/usr/bin/env node" },
-  external: ["chokidar", "@verbo/core"],
+  external: ["chokidar", "@soltaoverbo/core"],
 })

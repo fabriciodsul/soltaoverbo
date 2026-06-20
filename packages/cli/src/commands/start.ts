@@ -7,7 +7,7 @@ import {
   loadTerms,
   SpacedRepetition,
   type TermMatch,
-} from "@verbo/core"
+} from "@soltaoverbo/core"
 import { bold, cyan, dim, green } from "../ui.ts"
 
 const CODE_EXTS = new Set([

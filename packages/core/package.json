@@ -1,5 +1,5 @@
 {
-  "name": "@verbo/core",
+  "name": "@soltaoverbo/core",
   "version": "0.1.0",
   "description": "Core logic for verbo.dev — parser, injector and spaced repetition",
   "main": "./dist/index.js",

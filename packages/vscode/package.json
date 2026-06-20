@@ -54,7 +54,7 @@
     "package": "vsce package --no-dependencies"
   },
   "dependencies": {
-    "@verbo/core": "workspace:*"
+    "@soltaoverbo/core": "workspace:*"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",

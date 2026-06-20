@@ -1,5 +1,5 @@
 import { createInterface } from "node:readline"
-import { SpacedRepetition } from "@verbo/core"
+import { SpacedRepetition } from "@soltaoverbo/core"
 import { bold, dim, yellow } from "../ui.ts"
 
 export async function runReset(): Promise<void> {

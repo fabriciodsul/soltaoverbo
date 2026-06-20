@@ -1,5 +1,5 @@
 import * as vscode from "vscode"
-import { buildTermIndex, loadTerms, parseLine, SpacedRepetition } from "@verbo/core"
+import { buildTermIndex, loadTerms, parseLine, SpacedRepetition } from "@soltaoverbo/core"
 
 // ─── State (lives for the VS Code session) ───────────────────────────────────
 
