@@ -12,7 +12,10 @@ import { bold, cyan, dim, green } from "../ui.ts"
 
 const CODE_EXTS = new Set([
   ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs",
-  ".py", ".go", ".rs", ".java", ".kt", ".rb", ".php", ".cs", ".swift",
+  ".py", ".go", ".rs", ".java", ".kt", ".rb", ".php", ".cs",
+  ".swift", ".dart", ".scala", ".ex", ".exs",
+  ".sh", ".bash", ".zsh", ".fish",
+  ".sql", ".lua", ".c", ".cpp", ".h", ".hpp",
 ])
 
 export async function runStart(args: string[]): Promise<void> {

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "inference",
+    "term": "inference",
+    "translation": "inferência / geração de resposta",
+    "explanation": "execução do modelo para produzir uma saída a partir de uma entrada — etapa que roda em produção",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["llm", "ml", "production"]
+  },
+  {
+    "id": "embedding",
+    "term": "embedding",
+    "translation": "incorporação vetorial",
+    "explanation": "representação numérica de texto (ou imagem) num espaço vetorial — base da busca semântica",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["nlp", "vector", "search"]
+  },
+  {
+    "id": "prompt",
+    "term": "prompt",
+    "translation": "instrução / entrada do modelo",
+    "explanation": "texto enviado ao LLM que define o que ele deve fazer ou responder",
+    "category": "ai",
+    "level": "beginner",
+    "tags": ["llm", "input", "template"]
+  },
+  {
+    "id": "tokenizer",
+    "term": "tokenizer",
+    "translation": "tokenizador",
+    "explanation": "divide o texto em tokens (unidades menores) antes de enviar para o modelo processar",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["nlp", "preprocessing", "llm"]
+  },
+  {
+    "id": "completion",
+    "term": "completion",
+    "translation": "completação / resposta gerada",
+    "explanation": "texto gerado pelo modelo a partir do prompt — o 'output' de uma chamada ao LLM",
+    "category": "ai",
+    "level": "beginner",
+    "tags": ["llm", "output", "openai"]
+  },
+  {
+    "id": "rag",
+    "term": "RAG",
+    "translation": "geração aumentada por recuperação",
+    "explanation": "busca documentos relevantes num vetor store e injeta no contexto antes de chamar o LLM",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["retrieval", "vector", "llm"]
+  },
+  {
+    "id": "llm",
+    "term": "LLM",
+    "translation": "modelo de linguagem grande",
+    "explanation": "modelo treinado em enorme volume de texto capaz de gerar, resumir e raciocinar sobre linguagem",
+    "category": "ai",
+    "level": "beginner",
+    "tags": ["model", "nlp", "openai"]
+  },
+  {
+    "id": "hallucination",
+    "term": "hallucination",
+    "translation": "alucinação / resposta inventada",
+    "explanation": "quando o modelo gera informação falsa com aparência de verdadeira — principal risco dos LLMs",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["llm", "reliability", "safety"]
+  },
+  {
+    "id": "fine-tuning",
+    "term": "fine-tuning",
+    "translation": "ajuste fino",
+    "explanation": "treinar um modelo pré-existente com seus próprios dados para especializar em uma tarefa",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["training", "model", "customization"]
+  },
+  {
+    "id": "temperature",
+    "term": "temperature",
+    "translation": "temperatura / grau de aleatoriedade",
+    "explanation": "parâmetro que controla a criatividade da resposta — 0 é determinístico, 1+ é mais aleatório",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["llm", "parameter", "sampling"]
+  },
+  {
+    "id": "chunking",
+    "term": "chunking",
+    "translation": "divisão em blocos",
+    "explanation": "quebra documentos longos em pedaços menores antes de gerar embeddings para o vetor store",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["rag", "preprocessing", "vector"]
+  },
+  {
+    "id": "retrieval",
+    "term": "retrieval",
+    "translation": "recuperação de contexto",
+    "explanation": "busca os documentos mais relevantes no vetor store para enriquecer o prompt do LLM",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["rag", "search", "vector"]
+  },
+  {
+    "id": "grounding",
+    "term": "grounding",
+    "translation": "fundamentação em fatos",
+    "explanation": "técnica de forçar o modelo a basear respostas em fontes reais, reduzindo alucinações",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["rag", "reliability", "llm"]
+  },
+  {
+    "id": "multimodal",
+    "term": "multimodal",
+    "translation": "multimodal (texto + imagem + áudio)",
+    "explanation": "modelo ou pipeline capaz de processar e gerar mais de um tipo de mídia",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["model", "vision", "audio"]
+  },
+  {
+    "id": "sampling",
+    "term": "sampling",
+    "translation": "amostragem / estratégia de geração",
+    "explanation": "como o modelo escolhe o próximo token — top-k, top-p, greedy são estratégias de sampling",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["llm", "parameter", "generation"]
+  },
+  {
+    "id": "checkpoint",
+    "term": "checkpoint",
+    "translation": "ponto de salvamento do modelo",
+    "explanation": "estado dos pesos salvos durante o treinamento — permite retomar ou publicar uma versão específica",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["training", "model", "weights"]
+  },
+  {
+    "id": "distillation",
+    "term": "distillation",
+    "translation": "destilação / compressão de modelo",
+    "explanation": "treina um modelo menor (student) para imitar um modelo maior (teacher), mantendo boa performance",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["training", "compression", "efficiency"]
+  },
+  {
+    "id": "reranking",
+    "term": "reranking",
+    "translation": "reordenação de resultados",
+    "explanation": "passa os documentos recuperados por um segundo modelo para ordenar melhor por relevância",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["rag", "search", "relevance"]
+  },
+  {
+    "id": "streaming",
+    "term": "streaming",
+    "translation": "transmissão token a token",
+    "explanation": "modo onde o modelo envia tokens conforme gera, em vez de esperar a resposta completa",
+    "category": "ai",
+    "level": "beginner",
+    "tags": ["llm", "ux", "async"]
+  },
+  {
+    "id": "overfit",
+    "term": "overfit",
+    "translation": "sobreajuste / memorização excessiva",
+    "explanation": "quando o modelo decora os dados de treino e perde capacidade de generalizar para dados novos",
+    "category": "ai",
+    "level": "intermediate",
+    "tags": ["training", "evaluation", "ml"]
+  },
+  {
+    "id": "quantization",
+    "term": "quantization",
+    "translation": "quantização / compressão de pesos",
+    "explanation": "reduz a precisão dos pesos do modelo (ex: float32 → int8) para economizar memória e acelerar",
+    "category": "ai",
+    "level": "advanced",
+    "tags": ["optimization", "inference", "gguf"]
+  }
+]

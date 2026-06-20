@@ -196,5 +196,59 @@
     "category": "general",
     "level": "beginner",
     "tags": ["javascript", "typescript", "null-safety"]
+  },
+  {
+    "id": "mutable",
+    "term": "mutable",
+    "translation": "mutável / pode ser alterado",
+    "explanation": "dado que pode ser modificado após ser criado — oposto de immutable; cuidado com side effects",
+    "category": "general",
+    "level": "beginner",
+    "tags": ["state", "data", "design"]
+  },
+  {
+    "id": "decorator",
+    "term": "decorator",
+    "translation": "decorador / anotação de comportamento",
+    "explanation": "função especial (@Injectable, @Component) que adiciona comportamento a classes e métodos",
+    "category": "general",
+    "level": "intermediate",
+    "tags": ["typescript", "java", "python", "pattern"]
+  },
+  {
+    "id": "event-emitter",
+    "term": "event emitter",
+    "translation": "emissor de eventos",
+    "explanation": "objeto que dispara eventos nomeados para que ouvintes registrados reajam a eles",
+    "category": "general",
+    "level": "intermediate",
+    "tags": ["events", "nodejs", "pattern"]
+  },
+  {
+    "id": "factory",
+    "term": "factory",
+    "translation": "fábrica / função criadora de objetos",
+    "explanation": "função ou classe que centraliza a criação de objetos — esconde a lógica de instanciação",
+    "category": "general",
+    "level": "intermediate",
+    "tags": ["pattern", "oop", "design"]
+  },
+  {
+    "id": "proxy",
+    "term": "proxy",
+    "translation": "intermediário dinâmico de objeto",
+    "explanation": "envolve um objeto e intercepta operações (get, set, call) para adicionar comportamento",
+    "category": "general",
+    "level": "advanced",
+    "tags": ["javascript", "pattern", "metaprogramming"]
+  },
+  {
+    "id": "higher-order-function",
+    "term": "higher-order function",
+    "translation": "função de ordem superior",
+    "explanation": "função que recebe ou retorna outra função — map, filter e reduce são exemplos clássicos",
+    "category": "general",
+    "level": "intermediate",
+    "tags": ["functional", "javascript", "pattern"]
   }
 ]

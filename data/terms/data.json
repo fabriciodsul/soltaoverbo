@@ -187,5 +187,59 @@
     "category": "data",
     "level": "advanced",
     "tags": ["sql", "performance", "cache"]
+  },
+  {
+    "id": "constraint",
+    "term": "constraint",
+    "translation": "restrição / regra de integridade",
+    "explanation": "regra aplicada no banco para garantir validade dos dados: NOT NULL, UNIQUE, FOREIGN KEY, CHECK",
+    "category": "data",
+    "level": "beginner",
+    "tags": ["sql", "schema", "integrity"]
+  },
+  {
+    "id": "partition",
+    "term": "partition",
+    "translation": "particionamento de tabela",
+    "explanation": "divide uma tabela grande em partes menores por critério (data, região) para acelerar queries",
+    "category": "data",
+    "level": "advanced",
+    "tags": ["sql", "performance", "scalability"]
+  },
+  {
+    "id": "dto",
+    "term": "DTO",
+    "translation": "objeto de transferência de dados",
+    "explanation": "classe ou tipo que define a forma dos dados trafegados entre camadas ou serviços",
+    "category": "data",
+    "level": "intermediate",
+    "tags": ["pattern", "api", "typescript"]
+  },
+  {
+    "id": "snapshot",
+    "term": "snapshot",
+    "translation": "fotografia do estado dos dados",
+    "explanation": "cópia ponto-a-ponto do estado do banco ou objeto — usada em backups, testes e event sourcing",
+    "category": "data",
+    "level": "intermediate",
+    "tags": ["backup", "testing", "events"]
+  },
+  {
+    "id": "cascade",
+    "term": "cascade",
+    "translation": "propagação em cascata",
+    "explanation": "define que operações (DELETE, UPDATE) se propagam automaticamente para registros relacionados",
+    "category": "data",
+    "level": "intermediate",
+    "tags": ["sql", "foreign-key", "relational"]
+  },
+  {
+    "id": "hot-path",
+    "term": "hot path",
+    "translation": "caminho crítico / rota mais executada",
+    "explanation": "parte do código executada com maior frequência — otimização aqui tem o maior impacto em performance",
+    "category": "data",
+    "level": "advanced",
+    "tags": ["performance", "optimization", "profiling"]
   }
 ]

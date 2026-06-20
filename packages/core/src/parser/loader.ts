@@ -5,6 +5,7 @@ import backendTerms from "../../../../data/terms/backend.json"
 import frontendTerms from "../../../../data/terms/frontend.json"
 import devopsTerms from "../../../../data/terms/devops.json"
 import dataTerms from "../../../../data/terms/data.json"
+import aiTerms from "../../../../data/terms/ai.json"
 
 export interface Term {
   id: string
@@ -23,6 +24,7 @@ const BUILT_IN: Term[] = [
   ...(frontendTerms as unknown as Term[]),
   ...(devopsTerms as unknown as Term[]),
   ...(dataTerms as unknown as Term[]),
+  ...(aiTerms as unknown as Term[]),
 ]
 
 /**

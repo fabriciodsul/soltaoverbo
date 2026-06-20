@@ -187,5 +187,59 @@
     "category": "backend",
     "level": "intermediate",
     "tags": ["data", "json", "api"]
+  },
+  {
+    "id": "retry",
+    "term": "retry",
+    "translation": "nova tentativa automática",
+    "explanation": "tenta a operação novamente após falha, geralmente com backoff exponencial entre tentativas",
+    "category": "backend",
+    "level": "intermediate",
+    "tags": ["resilience", "error-handling", "reliability"]
+  },
+  {
+    "id": "graphql",
+    "term": "GraphQL",
+    "translation": "linguagem de consulta de APIs",
+    "explanation": "permite ao cliente pedir exatamente os campos que precisa — sem under-fetching nem over-fetching",
+    "category": "backend",
+    "level": "intermediate",
+    "tags": ["api", "query", "schema"]
+  },
+  {
+    "id": "timeout",
+    "term": "timeout",
+    "translation": "tempo limite de resposta",
+    "explanation": "aborta a operação se não terminar dentro do prazo definido — evita que chamadas lentas travem o sistema",
+    "category": "backend",
+    "level": "beginner",
+    "tags": ["reliability", "network", "error-handling"]
+  },
+  {
+    "id": "socket",
+    "term": "socket",
+    "translation": "conexão bidirecional persistente",
+    "explanation": "canal aberto entre cliente e servidor que permite troca de mensagens em tempo real (WebSocket)",
+    "category": "backend",
+    "level": "intermediate",
+    "tags": ["realtime", "network", "websocket"]
+  },
+  {
+    "id": "interceptor",
+    "term": "interceptor",
+    "translation": "interceptador de chamadas",
+    "explanation": "captura requisições ou respostas para adicionar comportamento global — ex: adicionar headers, logar erros",
+    "category": "backend",
+    "level": "intermediate",
+    "tags": ["pattern", "http", "axios"]
+  },
+  {
+    "id": "batch",
+    "term": "batch",
+    "translation": "lote / processamento em grupo",
+    "explanation": "agrupa múltiplas operações para executar de uma vez — reduz round-trips ao banco ou à API",
+    "category": "backend",
+    "level": "intermediate",
+    "tags": ["performance", "database", "optimization"]
   }
 ]

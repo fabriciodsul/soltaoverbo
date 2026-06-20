@@ -77,7 +77,8 @@ function decorateEditor(editor: vscode.TextEditor): void {
   const languages = vscode.workspace.getConfiguration("verbo")
     .get<string[]>("languages") ??
     ["typescript", "typescriptreact", "javascript", "javascriptreact",
-     "python", "go", "rust", "java", "kotlin", "ruby", "php", "csharp"]
+     "python", "go", "rust", "java", "kotlin", "ruby", "php", "csharp",
+     "swift", "dart", "scala", "elixir", "shellscript", "sql", "lua", "c", "cpp"]
 
   if (!languages.includes(editor.document.languageId)) return
 

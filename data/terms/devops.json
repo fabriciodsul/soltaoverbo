@@ -187,5 +187,59 @@
     "category": "devops",
     "level": "intermediate",
     "tags": ["cache", "dns", "expiration"]
+  },
+  {
+    "id": "autoscaling",
+    "term": "autoscaling",
+    "translation": "escalonamento automático",
+    "explanation": "aumenta ou diminui instâncias automaticamente com base em métricas como CPU e número de requisições",
+    "category": "devops",
+    "level": "intermediate",
+    "tags": ["kubernetes", "cloud", "scalability"]
+  },
+  {
+    "id": "namespace",
+    "term": "namespace",
+    "translation": "espaço de nomes isolado",
+    "explanation": "no Kubernetes, isola recursos em grupos lógicos — produção, dev e staging podem coexistir no mesmo cluster",
+    "category": "devops",
+    "level": "intermediate",
+    "tags": ["kubernetes", "isolation", "organization"]
+  },
+  {
+    "id": "sidecar",
+    "term": "sidecar",
+    "translation": "contêiner auxiliar no mesmo pod",
+    "explanation": "contêiner extra que roda junto com o principal compartilhando rede e armazenamento — ex: proxy, log agent",
+    "category": "devops",
+    "level": "advanced",
+    "tags": ["kubernetes", "pattern", "microservices"]
+  },
+  {
+    "id": "ingress",
+    "term": "ingress",
+    "translation": "controlador de entrada / roteador externo",
+    "explanation": "no Kubernetes, rota tráfego HTTP externo para os serviços internos corretos por domínio ou path",
+    "category": "devops",
+    "level": "intermediate",
+    "tags": ["kubernetes", "networking", "routing"]
+  },
+  {
+    "id": "tracing",
+    "term": "tracing",
+    "translation": "rastreamento distribuído",
+    "explanation": "acompanha o caminho de uma requisição por vários microsserviços para identificar gargalos",
+    "category": "devops",
+    "level": "advanced",
+    "tags": ["observability", "monitoring", "distributed"]
+  },
+  {
+    "id": "alerting",
+    "term": "alerting",
+    "translation": "sistema de alertas",
+    "explanation": "dispara notificações automáticas quando métricas ou logs ultrapassam limites definidos",
+    "category": "devops",
+    "level": "intermediate",
+    "tags": ["monitoring", "oncall", "reliability"]
   }
 ]

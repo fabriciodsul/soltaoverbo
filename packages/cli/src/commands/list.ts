@@ -1,7 +1,7 @@
 import { loadTerms, SpacedRepetition } from "@soltaoverbo/core"
 import { bold, cyan, dim, green, yellow } from "../ui.ts"
 
-const CATEGORIES = ["general", "backend", "frontend", "devops", "data"]
+const CATEGORIES = ["general", "backend", "frontend", "devops", "data", "ai"]
 
 export function runList(args: string[]): void {
   const catIdx = args.indexOf("--category")

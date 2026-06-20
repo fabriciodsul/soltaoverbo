@@ -187,5 +187,59 @@
     "category": "frontend",
     "level": "advanced",
     "tags": ["react", "pattern", "component"]
+  },
+  {
+    "id": "pwa",
+    "term": "PWA",
+    "translation": "aplicativo web progressivo",
+    "explanation": "site que se comporta como app nativo — suporta offline, instalação e notificações push",
+    "category": "frontend",
+    "level": "intermediate",
+    "tags": ["web", "mobile", "offline"]
+  },
+  {
+    "id": "service-worker",
+    "term": "service worker",
+    "translation": "trabalhador de serviço (cache e offline)",
+    "explanation": "script que roda em background no browser, interceptando requisições para cache e funcionamento offline",
+    "category": "frontend",
+    "level": "advanced",
+    "tags": ["pwa", "cache", "offline"]
+  },
+  {
+    "id": "web-worker",
+    "term": "web worker",
+    "translation": "thread em background no navegador",
+    "explanation": "executa JavaScript em paralelo sem bloquear a thread principal da interface",
+    "category": "frontend",
+    "level": "advanced",
+    "tags": ["performance", "thread", "concurrency"]
+  },
+  {
+    "id": "emit",
+    "term": "emit",
+    "translation": "emitir / disparar evento",
+    "explanation": "envia um evento do componente filho para o pai — padrão de comunicação em Vue e Web Components",
+    "category": "frontend",
+    "level": "beginner",
+    "tags": ["vue", "events", "component"]
+  },
+  {
+    "id": "composable",
+    "term": "composable",
+    "translation": "função reutilizável com estado (Vue 3)",
+    "explanation": "função que encapsula lógica com estado usando a Composition API do Vue — equivalente ao hook do React",
+    "category": "frontend",
+    "level": "intermediate",
+    "tags": ["vue", "composition-api", "reuse"]
+  },
+  {
+    "id": "slot",
+    "term": "slot",
+    "translation": "espaço reservado no componente",
+    "explanation": "permite que o componente pai injete conteúdo HTML dentro do componente filho",
+    "category": "frontend",
+    "level": "intermediate",
+    "tags": ["vue", "web-components", "composition"]
   }
 ]

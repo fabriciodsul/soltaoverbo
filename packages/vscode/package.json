@@ -2,7 +2,7 @@
   "name": "verbo",
   "displayName": "verbo.dev — Inglês técnico passivo",
   "description": "Aprenda inglês técnico enquanto você codifica, sem sair do fluxo.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "verbo-dev",
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Education", "Other"],
@@ -41,7 +41,9 @@
             "typescript", "typescriptreact",
             "javascript", "javascriptreact",
             "python", "go", "rust",
-            "java", "kotlin", "ruby", "php", "csharp"
+            "java", "kotlin", "ruby", "php", "csharp",
+            "swift", "dart", "scala", "elixir",
+            "shellscript", "sql", "lua", "c", "cpp"
           ],
           "description": "Linguagens onde as anotações aparecem."
         }
