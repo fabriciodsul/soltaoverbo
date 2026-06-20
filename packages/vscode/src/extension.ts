@@ -83,18 +83,24 @@ function decorateEditor(editor: vscode.TextEditor): void {
   if (!languages.includes(editor.document.languageId)) return
 
   const decorations: vscode.DecorationOptions[] = []
-  const seenTerms = new Set([...sr.absorbedIds(), ...seenThisSession])
+  const absorbed = sr.absorbedIds()
+  // Per-file scope: each file shows all non-absorbed terms (one per term).
+  // seenThisSession only prevents re-counting for spaced rep stats, not ghost text.
+  const seenInFile = new Set<string>()
   const doc = editor.document
 
   for (let i = 0; i < doc.lineCount; i++) {
     const line = doc.lineAt(i)
-    const matches = parseLine(line.text, terms, seenTerms)
+    const matches = parseLine(line.text, terms, new Set([...absorbed, ...seenInFile]))
     if (matches.length === 0) continue
 
     const match = matches[0]!
-    seenTerms.add(match.id)
-    seenThisSession.add(match.id)
-    sr.markSeen(match.id)
+    seenInFile.add(match.id)
+
+    if (!seenThisSession.has(match.id)) {
+      seenThisSession.add(match.id)
+      sr.markSeen(match.id)
+    }
 
     decorations.push({
       range: new vscode.Range(line.range.end, line.range.end),
