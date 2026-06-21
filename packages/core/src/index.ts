@@ -9,3 +9,7 @@ export type { InjectorOptions, InjectionResult } from "./injector/index"
 
 export { SpacedRepetition, MAX_NEW_TERMS_PER_SESSION } from "./spaced-rep/index"
 export type { SpacedRepStats } from "./spaced-rep/index"
+
+export { explainCode, injectExplanations } from "./explainer/index"
+
+export { getApiKey, setApiKey, hasConsented, setConsented } from "./config/index"

@@ -1,4 +1,6 @@
 import { execSync } from "node:child_process"
+import { runConfig } from "./commands/config.ts"
+import { runExplain } from "./commands/explain.ts"
 import { runInstall } from "./commands/install.ts"
 import { runList } from "./commands/list.ts"
 import { runReset } from "./commands/reset.ts"
@@ -34,6 +36,8 @@ function help(): void {
   ${bold("COMANDOS")}
     ${bold("start")}                  Modo pipe: lê stdin e injeta comentários em pt-BR
     ${bold("start --watch")} ${dim("<dir>")}   Observa diretório e loga termos novos no terminal
+    ${bold("explain")} ${dim("<arquivo>")}      Explica o código linha por linha via IA (pt-BR)
+    ${bold("config set-key")} ${dim("<chave>")} Salva a API key da Anthropic
     ${bold("stats")}                  Mostra seu progresso de aprendizado
     ${bold("stats --short")}          Saída compacta para status bars
     ${bold("install")}                Injeta termos no Claude Code (barra de pensamento)
@@ -45,6 +49,8 @@ function help(): void {
   ${bold("EXEMPLOS")}
     cat handler.ts | verbo start
     verbo start --watch ./src
+    verbo explain handler.ts
+    verbo config set-key sk-ant-...
     verbo stats
     verbo install
     verbo list --category backend
@@ -58,6 +64,12 @@ function help(): void {
 switch (sub) {
   case "start":
     await runStart(rest)
+    break
+  case "explain":
+    await runExplain(rest)
+    break
+  case "config":
+    runConfig(rest)
     break
   case "stats":
     runStats(rest)
