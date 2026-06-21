@@ -42,7 +42,23 @@ export async function runExplain(args: string[]): Promise<void> {
 
   process.stderr.write(dim(`[verbo] Explicando ${basename(filePath)}...\n`))
 
-  const explanations = await explainCode(code, lang, apiKey)
+  let explanations: Map<number, string>
+  try {
+    explanations = await explainCode(code, lang, apiKey)
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err)
+    if (msg.includes("credit balance is too low")) {
+      console.error(`${bold("[verbo]")} Sem créditos na conta Anthropic. Adicione em: https://console.anthropic.com`)
+    } else if (msg.includes("401") || msg.includes("invalid x-api-key") || msg.includes("authentication")) {
+      console.error(`${bold("[verbo]")} API key inválida. Reconfigure com: verbo config set-key <chave>`)
+    } else if (msg.includes("529") || msg.includes("overloaded")) {
+      console.error(`${bold("[verbo]")} API sobrecarregada. Tente novamente em alguns instantes.`)
+    } else {
+      console.error(`${bold("[verbo]")} Erro na API: ${msg}`)
+    }
+    process.exit(1)
+  }
+
   const annotated = injectExplanations(code, explanations)
   process.stdout.write(annotated + "\n")
 }
@@ -50,13 +66,19 @@ export async function runExplain(args: string[]): Promise<void> {
 function askConsent(fileName: string): Promise<boolean> {
   return new Promise((resolve) => {
     const rl = createInterface({ input: process.stdin, output: process.stderr })
+    let settled = false
+    const done = (val: boolean) => {
+      if (settled) return
+      settled = true
+      rl.removeAllListeners()
+      rl.close()
+      resolve(val)
+    }
+    rl.on("close", () => done(false))
     rl.question(
       `${bold("[verbo]")} O conteúdo de ${cyan(fileName)} será enviado para a API da Anthropic.\n` +
       `         Esta mensagem só aparece uma vez. Continuar? (s/N): `,
-      (answer) => {
-        rl.close()
-        resolve(answer.trim().toLowerCase() === "s")
-      },
+      (answer) => done(answer.trim().toLowerCase() === "s"),
     )
   })
 }

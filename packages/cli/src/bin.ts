@@ -23,7 +23,7 @@ if (process.platform === "win32") {
   }
 }
 
-const VERSION = "0.4.1"
+const VERSION = "0.4.2"
 const [, , sub, ...rest] = process.argv
 
 function help(): void {
