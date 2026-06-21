@@ -211,7 +211,7 @@ export default function Home() {
               >
                 @Agoniadoz
               </a>
-              {" "}— um copiloto para motoristas de aplicativo. Vem aí.
+              {" "}— Do caos ao controle, em tempo real. Vem aí.
             </p>
           </div>
           <a
