@@ -98,6 +98,35 @@ Lê código do stdin, injeta comentários em pt-BR e escreve no stdout.
 cat handler.ts | verbo start
 ```
 
+### verbo explain
+
+Explica o código linha por linha em português brasileiro usando IA. Injeta as explicações como comentários inline e escreve no stdout — sem modificar o arquivo original.
+
+```bash
+verbo explain handler.ts
+verbo explain src/auth.ts > src/auth.annotated.ts
+```
+
+**Saída:**
+```typescript
+import { createInterface } from "node:readline"  // → importa interface de leitura de linha
+import { readFileSync } from "node:fs"            // → importa leitura síncrona de arquivos
+import { basename, extname } from "node:path"    // → extrai nome e extensão do caminho
+
+export async function runExplain(args: string[]): Promise<void> {  // → função principal do comando
+  const filePath = args[0]                        // → pega o primeiro argumento como caminho
+  if (!filePath) {                                // → valida se o arquivo foi informado
+```
+
+Requer uma API key da Anthropic:
+
+```bash
+verbo config set-key sk-ant-...   # salva em ~/.verbo/config.json
+verbo config show-key             # exibe a key atual (parcial)
+```
+
+Na primeira execução, o verbo pede confirmação antes de enviar o código à API. A key fica salva localmente e nunca é logada.
+
 ### Outros comandos
 
 ```bash
